@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-color: #eee9e9;
+    color: #1d1d1d;
+    text-align: center;
+}
+
+.conteudo{    
+    padding: 1%;    
+}
+
+.btn{    
+    font-weight: bold;    
+    margin-top: 0.5%;
+}
+
+.jogo{    
+    margin-top: 1%;
+}
+
+.texto{
+    display: none;
+}
+
+.quad0, .quad1, .quad2, .quad3, .quad4, .quad5{
+    width: 160px;
+    height: 160px;
+    background-color: #1d1d1d;
+    border-radius: 2% 2% 2% 2%;
+    position: relative;
+    display: inline-block;
+    margin: 1%;
+}
+
+.rgb h5{
+    font-weight: bold;
+    margin-top: 0.5%;
+}
+
+.rgb p{
+    font-weight: bold;
+    font-size: 20px;
+}
