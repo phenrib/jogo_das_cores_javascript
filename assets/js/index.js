@@ -58,9 +58,7 @@ function setRgb(arrayParam = [], chooseParam){
     
     choose = parseInt(Math.random() * chooseParam)
 
-    let nameClass = "quad" + choose;
-
-    console.log(nameClass)
+    let nameClass = "quad" + choose;    
     
     for (let index = 0; index < chooseParam; index++) {
 
@@ -73,79 +71,87 @@ function setRgb(arrayParam = [], chooseParam){
         arrayParam.splice(0, 3)
     }    
 
-    
-
-    check(nameClass)
+    check(nameClass, chooseParam)
 
 }
 
-function check(classe){
+function check(classe, condition){
 
-    document.querySelector(".quad0").addEventListener("click", ()=>{
+    console.log(condition)
+    
+    switch(condition){
+        case 3:
+            document.querySelector(".quad0").addEventListener("click", ()=>{
 
-        if(classe == "quad0"){
-            alert("Parabéns, você acertou!")
-            document.querySelector(".quad1").style.display = 'none'
-            document.querySelector(".quad2").style.display = 'none'
-            reseteGame()
-        }else{
-            alert("Que pena, você errou!")
-            if(classe == "quad1"){
-                document.querySelector(".quad0").style.display = 'none'
-                document.querySelector(".quad2").style.display = 'none'
-                reseteGame()
-            }else{
-                document.querySelector(".quad0").style.display = 'none'
-                document.querySelector(".quad1").style.display = 'none'
-                reseteGame()
-            }
-        }
-
-    })
-
-    document.querySelector(".quad1").addEventListener("click", ()=>{
-
-        if(classe == "quad1"){
-            alert("Parabéns, você acertou!")
-            document.querySelector(".quad0").style.display = 'none'
-            document.querySelector(".quad2").style.display = 'none'
-            reseteGame()
-        }else{
-            alert("Que pena, você errou!")
-            if(classe == "quad2"){
-                document.querySelector(".quad0").style.display = 'none'
-                document.querySelector(".quad1").style.display = 'none'
-                reseteGame()
-            }else{
-                document.querySelector(".quad1").style.display = 'none'
-                document.querySelector(".quad2").style.display = 'none'
-                reseteGame()
-            }          
-        }
-
-    })
-
-    document.querySelector(".quad2").addEventListener("click", ()=>{
-
-        if(classe == "quad2"){
-            alert("Parabéns, você acertou!")
-            document.querySelector(".quad0").style.display = 'none'
-            document.querySelector(".quad1").style.display = 'none'
-            reseteGame()
-        }else{
-            alert("Que pena, você errou!")
-            if(classe == "quad1"){
-                document.querySelector(".quad0").style.display = 'none'
-                document.querySelector(".quad2").style.display = 'none'
-                reseteGame()
-            }else{
-                document.querySelector(".quad1").style.display = 'none'
-                document.querySelector(".quad2").style.display = 'none'
-                reseteGame()
-            }
-        }
-
-    })
+                if(classe == "quad0"){
+                    alert("Parabéns, você acertou!")
+                    document.querySelector(".quad1").style.display = 'none'
+                    document.querySelector(".quad2").style.display = 'none'
+                    reseteGame()
+                }else{
+                    alert("Que pena, você errou!")
+                    if(classe == "quad1"){
+                        document.querySelector(".quad0").style.display = 'none'
+                        document.querySelector(".quad2").style.display = 'none'
+                        reseteGame()
+                    }else{
+                        document.querySelector(".quad0").style.display = 'none'
+                        document.querySelector(".quad1").style.display = 'none'
+                        reseteGame()
+                    }
+                }
+        
+            })
+        
+            document.querySelector(".quad1").addEventListener("click", ()=>{
+        
+                if(classe == "quad1"){
+                    alert("Parabéns, você acertou!")
+                    document.querySelector(".quad0").style.display = 'none'
+                    document.querySelector(".quad2").style.display = 'none'
+                    reseteGame()
+                }else{
+                    alert("Que pena, você errou!")
+                    if(classe == "quad2"){
+                        document.querySelector(".quad0").style.display = 'none'
+                        document.querySelector(".quad1").style.display = 'none'
+                        reseteGame()
+                    }else{
+                        document.querySelector(".quad1").style.display = 'none'
+                        document.querySelector(".quad2").style.display = 'none'
+                        reseteGame()
+                    }          
+                }
+        
+            })
+        
+            document.querySelector(".quad2").addEventListener("click", ()=>{
+        
+                if(classe == "quad2"){
+                    alert("Parabéns, você acertou!")
+                    document.querySelector(".quad0").style.display = 'none'
+                    document.querySelector(".quad1").style.display = 'none'
+                    reseteGame()
+                }else{
+                    alert("Que pena, você errou!")
+                    if(classe == "quad1"){
+                        document.querySelector(".quad0").style.display = 'none'
+                        document.querySelector(".quad2").style.display = 'none'
+                        reseteGame()
+                    }else{
+                        document.querySelector(".quad1").style.display = 'none'
+                        document.querySelector(".quad2").style.display = 'none'
+                        reseteGame()
+                    }
+                }
+        
+            })
+            break
+        case 6:
+            alert("6")
+            break
+           
+    }
 
 }
 
